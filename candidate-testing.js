@@ -15,22 +15,41 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-
+candidateName = input.question("What is your name? "); 
+console.log("candidate's name: " + candidateName); 
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
+candidateAnswer = input.question( "Who was the first American woman in space? ");
+correctAnswer = "Sally Ride";
 
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+ let grade = 0;
+
+if (candidateAnswer === correctAnswer) {
+  console.log("your answer: " + candidateAnswer); 
+  console.log("correct answer: " + correctAnswer);
+  grade = grade + 1;
+}
+else {
+ console.log("your answer: " + candidateAnswer); 
+ console.log("correct answer: " + correctAnswer);
+
+}
 
 
-  let grade;
-  
+
+if(grade == 1) {
+  console.log("congratulations, you passed!" );
+} 
+  else {
+    console.log("I'm sorry, please try again" );
+  }
 
   return grade;
 }
