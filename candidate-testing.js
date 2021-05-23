@@ -21,8 +21,8 @@ console.log("candidate's name: " + candidateName);
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-// candidateAnswer = input.question( "Who was the first American woman in space? ");
-// correctAnswer = "Sally Ride";
+candidateAnswer = input.question( "Who was the first American woman in space? ");
+correctAnswer = "Sally Ride";
 
 }
 
@@ -30,8 +30,8 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
  let grade = 0;
-/*
-if (candidateAnswer === correctAnswer) {
+
+if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
   console.log("your answer: " + candidateAnswer); 
   console.log("correct answer: " + correctAnswer);
   grade = grade + 1;
@@ -50,7 +50,7 @@ if(grade == 1) {
   else {
     console.log("I'm sorry, please try again" );
   }
-*/
+
   return grade;
 }
 
