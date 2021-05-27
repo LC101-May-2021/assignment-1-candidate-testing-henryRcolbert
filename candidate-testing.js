@@ -49,7 +49,13 @@ for(i = 0; i < 5; i++) {
 
 candidateAnswers[i] = input.question(`${questions[i]}`);
 
+  candidateAnswer = candidateAnswers[i] ; 
+  correctAnswer = correctAnswers[i];
+
 // console.log(candidateAnswers[i]);
+
+  console.log("your answer: " + candidateAnswer); 
+  console.log("correct answer: " + correctAnswer);
 
 }
 
@@ -69,13 +75,13 @@ for(i = 0; i < 5; i++) {
   correctAnswer = correctAnswers[i];
 
 if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-  console.log("your answer: " + candidateAnswer); 
-  console.log("correct answer: " + correctAnswer);
+  //console.log("your answer: " + candidateAnswer); 
+  //console.log("correct answer: " + correctAnswer);
   grade = grade + 1;
 }
 else {
- console.log("your answer: " + candidateAnswer); 
- console.log("correct answer: " + correctAnswer);
+ //console.log("your answer: " + candidateAnswer); 
+ //console.log("correct answer: " + correctAnswer);
 
 }
 
