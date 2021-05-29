@@ -41,12 +41,12 @@ candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
   candidateAnswer = candidateAnswers[i] ; 
   correctAnswer = correctAnswers[i];
 
-  console.log(`your answer:  ${candidateAnswer}`); 
+  console.log(`your answer: ${candidateAnswer}`); 
   console.log(`correct answer: ${correctAnswer}`);
-  console.log("");
-}
+  
+} // end of loop
 
-}
+} // end of askQuestion function
 
 function gradeQuiz(candidateAnswers) {
 
