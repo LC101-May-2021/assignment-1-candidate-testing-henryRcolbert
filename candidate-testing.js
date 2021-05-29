@@ -24,13 +24,6 @@ let question;
 let correctAnswer;
 let candidateAnswer;
 
-/*
-Who was the first American woman in space?	"Sally Ride"
-True or false: 5 kilometer == 5000 meters?	"true"
-(5 + 3)/2 * 10 = ?	"true"
-Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?	"Trajectory"
-What is the minimum crew size for the ISS?
-*/
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -42,10 +35,6 @@ console.log("");
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-
-//candidateAnswer = input.question( "Who was the first American woman in space? ");
-//correctAnswer = "Sally Ride";
-
 for(i = 0; i < 5; i++) {
 
 candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
@@ -53,14 +42,12 @@ candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
   candidateAnswer = candidateAnswers[i] ; 
   correctAnswer = correctAnswers[i];
 
-// console.log(candidateAnswers[i]);
-
   console.log("your answer: " + candidateAnswer); 
   console.log("correct answer: " + correctAnswer) ;
   console.log("");
-}
+} // end of for loop 
 
-}
+}  
 
 
 
@@ -68,7 +55,6 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
  let grade = 0;
- let grade1 = 0;
 
 for(i = 0; i < 5; i++) { 
 
@@ -76,27 +62,19 @@ for(i = 0; i < 5; i++) {
   correctAnswer = correctAnswers[i];
 
 if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-  //console.log("your answer: " + candidateAnswer); 
-  //console.log("correct answer: " + correctAnswer);
   grade = grade + 1;
 }
-else {
- //console.log("your answer: " + candidateAnswer); 
- //console.log("correct answer: " + correctAnswer);
 
-}
-
-}
-
-grade1 = (grade / 5) * 100; 
-
+} // end of for loop
+ 
+// outputting grade and Status
 
 if(grade  > 3) {
-  console.log(">>> Overall Grade: "+ grade1 +"% ("+ grade + " of 5 responses correct) <<<");
+  console.log(">>> Overall Grade: "+ grade*20 +"% ("+ grade + " of 5 responses correct) <<<");
   console.log(">>> Status: PASSED <<<")
 } 
   else {
-    console.log(">>> Overall Grade: "+ grade1 +"% ("+ grade + " of 5 responses correct) <<<" );
+    console.log(">>> Overall Grade: "+ grade*20 +"% ("+ grade + " of 5 responses correct) <<<" );
     console.log(">>> Status: FAILED <<<")
   }
 
