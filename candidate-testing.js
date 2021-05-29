@@ -37,8 +37,8 @@ for(i = 0; i < 5; i++) {
 
 candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
 
-  candidateAnswer = candidateAnswers[i] ; 
-  correctAnswer = correctAnswers[i];
+  candidateAnswer = String(candidateAnswers[i]) ; 
+  correctAnswer = String(correctAnswers[i]) ;
 
   console.log("your answer: " + candidateAnswer); 
   console.log("correct answer: " + correctAnswer) ;
