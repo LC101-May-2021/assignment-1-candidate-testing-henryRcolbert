@@ -40,9 +40,15 @@ candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
   candidateAnswer = String(candidateAnswers[i]) ; 
   correctAnswer = String(correctAnswers[i]) ;
 
-  console.log("your answer: " + candidateAnswer); 
-  console.log("correct answer: " + correctAnswer) ;
-  console.log("");
+ 
+
+  // console.log("your answer: " + candidateAnswer); 
+  // console.log("correct answer: " + correctAnswer) ;
+ 
+  console.log(`your answer: ${candidateAnswer}`);
+  console.log(`correct answer: ${correctAnswer}`);
+  console.log(""); 
+  
 } // end of for loop 
 
 }  
