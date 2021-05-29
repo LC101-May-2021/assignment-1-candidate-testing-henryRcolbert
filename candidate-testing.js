@@ -36,6 +36,7 @@ function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("What is your name? "); 
 console.log("candidate's name: " + candidateName); 
+console.log("");  
 }
 
 function askQuestion() {
@@ -47,7 +48,7 @@ function askQuestion() {
 
 for(i = 0; i < 5; i++) {
 
-candidateAnswers[i] = input.question(`${questions[i]}`);
+candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
 
   candidateAnswer = candidateAnswers[i] ; 
   correctAnswer = correctAnswers[i];
@@ -55,8 +56,8 @@ candidateAnswers[i] = input.question(`${questions[i]}`);
 // console.log(candidateAnswers[i]);
 
   console.log("your answer: " + candidateAnswer); 
-  console.log("correct answer: " + correctAnswer);
-
+  console.log("correct answer: " + correctAnswer) ;
+  console.log("");
 }
 
 }
