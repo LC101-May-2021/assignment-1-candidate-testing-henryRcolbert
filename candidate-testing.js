@@ -20,9 +20,9 @@ let correctAnswers = [
   "3"
 ];
 let candidateAnswers = [];
-let question;
-let correctAnswer;
-let candidateAnswer;
+let question = "";
+let correctAnswer = "";
+let candidateAnswer = "";
 
 
 function askForName() {
@@ -65,14 +65,15 @@ if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
 
 } // end of for loop
  
+ grade = (grade / 5) * 100;
 // outputting grade and Status
 
-if(grade  > 3) {
-  console.log(">>> Overall Grade: "+ grade*20 +"% ("+ grade + " of 5 responses correct) <<<");
+if(grade  >= 80) {
+  console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<");
   console.log(">>> Status: PASSED <<<")
 } 
   else {
-    console.log(">>> Overall Grade: "+ grade*20 +"% ("+ grade + " of 5 responses correct) <<<" );
+    console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<" );
     console.log(">>> Status: FAILED <<<")
   }
 
