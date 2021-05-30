@@ -20,36 +20,28 @@ let correctAnswers = [
   '3'
 ];
 let candidateAnswers = [];
-let question = "";
-let correctAnswer = "";
+let question = "Who was the first American woman in space?";
+let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-candidateName = input.question("candidate's name: ");    
+  candidateName = input.question("candidate's name: ");    
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-for(i = 0; i < 5; i++) {
+  for(i = 0; i < 5; i++) {
 
-candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
-
-  //candidateAnswer = candidateAnswers[i]; 
-  //correctAnswer = correctAnswers[i];
-
+    candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
  
+    console.log(`your answer: ${candidateAnswers[i]}`);
+    console.log(`correct answer: ${correctAnswers[i]}`);
+    console.log(""); 
 
-  // console.log("your answer: " + candidateAnswer); 
-  // console.log("correct answer: " + correctAnswer) ;
- 
-  console.log(`your answer: ${candidateAnswers[i]}`);
-  console.log(`correct answer: ${correctAnswers[i]}`);
-  console.log(""); 
-
-} // end of for loop 
+  } // end of for loop 
 
 }  
 
@@ -65,23 +57,25 @@ function gradeQuiz(candidateAnswers) {
     candidateAnswer = candidateAnswers[i] ; 
     correctAnswer = correctAnswers[i];
 
-  if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-    grade = grade + 1;
-}
+      if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+        grade = grade + 1;
+      }
 
-} // end of for loop
+  } // end of for loop
  
-  grade = (grade / 5) * 100;
+ grade = (grade / 5) * 100;
+
 // outputting grade and Status
 
-  if(grade  >= 80) {
-    console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<");
-    console.log(">>> Status: PASSED <<<")
-} 
-  else {
-    console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<" );
-    console.log(">>> Status: FAILED <<<")
-  }
+      if(grade  >= 80) {
+        console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<");
+        console.log(">>> Status: PASSED <<<")
+      } // end of if statment 
+      
+      else {
+        console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<" );
+        console.log(">>> Status: FAILED <<<")
+      } // end of else statement
 
   return grade;
 }
