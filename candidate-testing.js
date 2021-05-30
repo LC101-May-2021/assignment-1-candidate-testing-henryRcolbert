@@ -20,7 +20,7 @@ let correctAnswers = [
   '3'
 ];
 let candidateAnswers = [];
-let question = "Who was the first American woman in space?";
+let question = " Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
 
