@@ -42,9 +42,16 @@ function askQuestion() {
     correctAnswer = correctAnswers[i];
 
     console.log(`your answer: ${candidateAnswer}`); 
-    console.log(`correct answer: ${correctAnswer}`);
+    console.log(`correct answer: ${correctAnswer}`); 
+      if(candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) 
+        {
+         console.log("that is correct!"); 
+        }
+      else {
+        console.log("incorrect");
+      }
   
-} // end of loop
+  } // end of loop
 
 } // end of askQuestion function
 
