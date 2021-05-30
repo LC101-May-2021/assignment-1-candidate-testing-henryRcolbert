@@ -37,18 +37,18 @@ for(i = 0; i < 5; i++) {
 
 candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}`);
 
-  candidateAnswer = String(candidateAnswers[i]) ; 
-  correctAnswer = String(correctAnswers[i]) ;
+  //candidateAnswer = candidateAnswers[i]; 
+  //correctAnswer = correctAnswers[i];
 
  
 
   // console.log("your answer: " + candidateAnswer); 
   // console.log("correct answer: " + correctAnswer) ;
  
-  console.log(`your answer: ${candidateAnswer}`);
-  console.log(`correct answer: ${correctAnswer}`);
+  console.log(`your answer: ${candidateAnswers[i]}`);
+  console.log(`correct answer: ${correctAnswers[i]}`);
   console.log(""); 
-  
+
 } // end of for loop 
 
 }  
@@ -60,23 +60,23 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
  let grade = 0;
 
-for(i = 0; i < 5; i++) { 
+  for(i = 0; i < 5; i++) { 
 
-  candidateAnswer = candidateAnswers[i] ; 
-  correctAnswer = correctAnswers[i];
+    candidateAnswer = candidateAnswers[i] ; 
+    correctAnswer = correctAnswers[i];
 
-if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-  grade = grade + 1;
+  if (candidateAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    grade = grade + 1;
 }
 
 } // end of for loop
  
- grade = (grade / 5) * 100;
+  grade = (grade / 5) * 100;
 // outputting grade and Status
 
-if(grade  >= 80) {
-  console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<");
-  console.log(">>> Status: PASSED <<<")
+  if(grade  >= 80) {
+    console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<");
+    console.log(">>> Status: PASSED <<<")
 } 
   else {
     console.log(">>> Overall Grade: "+ grade +"% ("+ grade/20 + " of 5 responses correct) <<<" );
